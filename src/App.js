@@ -5,6 +5,7 @@ import  AddAudienceInfo from "./components/AddAudienceInfo";
 import { Link } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
+import ShowPieceList from "./components/ShowPieceList";
 
 
 
@@ -29,10 +30,14 @@ function App() {
       <Route path="/audienceinfo">
         <AddAudienceInfo />
       </Route>
-        <p>
-          About the company and about the Show
-        </p>
+      <Route path="/show_pieces">
+        <ShowPieceList />
+        <p>About the Show</p>
+      </Route>
         
+        <h2>
+          About the company
+        </h2>
       
     </div>
   );
