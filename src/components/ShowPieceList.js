@@ -24,13 +24,11 @@ function ShowPieceList() {
     }
     )
 
-  return (
+    return (
     <div>ShowPieceList
         <ul>
             {displayPieces}
         </ul>
-
-
     </div>
   )
 }

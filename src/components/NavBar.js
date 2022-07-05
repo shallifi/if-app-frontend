@@ -20,6 +20,12 @@ return (
             >
                 <h3> Go to the Program for Tonight</h3>
         </NavLink>
+        <NavLink exact to="/feedbacks"
+            style={boxButtonStyle} 
+            activeStyle={{ background: "darkred", }}
+            >
+                <h3> Feedback list of the show</h3>
+        </NavLink>
 
     </div>
 

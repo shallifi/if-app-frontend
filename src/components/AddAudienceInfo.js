@@ -47,62 +47,62 @@ function AudienceMember(){
         }
         
         
-        return (
+    return (
             // needed section to make this work
-            <section>
-            <form style={formStyle} onSubmit={handleSubmit}>
-        <div>
-            <p>The information that you provide will help the company obtain grants for more performances in the future.</p>
+    <section>
+        <form style={formStyle} onSubmit={handleSubmit}>
+            <div>
+                <p>The information that you provide will help the company obtain grants for more performances in the future.</p>
 
-            
-        <h2>Name</h2>
-        <input type="text" 
-            style={formStyle} 
-            name="name" 
-            placeholder="First and Last Name"
-            onChange={handleChange}
-            value={formData.name}
-        />
-        
-        <h2 style={formStyle}>Age Range</h2>
-            <select className='drop-menu' >
-                <option selected value="age">Select your decade</option>
-                <option value="age">below 20 years of age</option>
-                <option value="age">in your 20's</option>
-                <option value="age">in your 30's</option>
-                <option value="age">in your 40's</option>
-                <option value="age">in your 50's</option>
-                <option value="age">in your 60's</option>
-                <option value="age">in your 70's</option>
-                <option value="age">above 80 years old</option>
-            </select>
-
-
-        <h2>Household Income</h2>
-            <input type="number" 
-            style={formStyle} 
-            name="household_income" 
-            placeholder="Yearly Income Estimate"
-            onChange={handleChange}
-            value={formData.manager}/> 
-        
-        <h2>City of Residence</h2>
+                
+            <h2>Name</h2>
             <input type="text" 
-            style={formStyle} 
-            name="city" 
-            placeholder="What city do you call home?"
-            onChange={handleChange}
-            value={formData.title}/>
-        
-        <h2>Seeing This Company For The First Time?</h2>
-        <select className='drop-menu' >
-            <option selected value="first_time">Select true for Yes or false for No</option>
-                <option value="first_time"> true</option>
-                <option value="first_time"> false</option>
-        </select> 
+                style={formStyle} 
+                name="name" 
+                placeholder="First and Last Name"
+                onChange={handleChange}
+                value={formData.name}
+            />
+            
+            <h2 style={formStyle}>Age Range</h2>
+                <select className='drop-menu' >
+                    <option selected value="age">Select your decade</option>
+                    <option value="age">below 20 years of age</option>
+                    <option value="age">in your 20's</option>
+                    <option value="age">in your 30's</option>
+                    <option value="age">in your 40's</option>
+                    <option value="age">in your 50's</option>
+                    <option value="age">in your 60's</option>
+                    <option value="age">in your 70's</option>
+                    <option value="age">above 80 years old</option>
+                </select>
 
-        <button type="submit"  style={submitButton}>Submit Your Information and Proceed to Feedback Section</button>
-        </div>
+
+            <h2>Household Income</h2>
+                <input type="number" 
+                style={formStyle} 
+                name="household_income" 
+                placeholder="Yearly Income Estimate"
+                onChange={handleChange}
+                value={formData.manager}/> 
+            
+            <h2>City of Residence</h2>
+                <input type="text" 
+                style={formStyle} 
+                name="city" 
+                placeholder="What city do you call home?"
+                onChange={handleChange}
+                value={formData.title}/>
+            
+            <h2>Seeing This Company For The First Time?</h2>
+            <select className='drop-menu' >
+                <option selected value="first_time">Select true for Yes or false for No</option>
+                    <option value="first_time"> true</option>
+                    <option value="first_time"> false</option>
+            </select> 
+
+            <button type="submit"  style={submitButton}>Submit Your Information and Proceed to Feedback Section</button>
+            </div>
         </form>
     </section>
     )

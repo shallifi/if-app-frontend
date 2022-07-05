@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import ShowPieceList from "./components/ShowPieceList";
+import FeedbackList from "./components/FeedbackList";
 
 
 
@@ -33,6 +34,10 @@ function App() {
       <Route path="/show_pieces">
         <ShowPieceList />
         <p>About the Show</p>
+      </Route>
+      <Route path="/feedbacks">
+        <FeedbackList />
+        <p>opinions of pieces</p>
       </Route>
         
         <h2>
