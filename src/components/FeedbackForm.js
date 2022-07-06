@@ -6,7 +6,8 @@ import { useHistory } from 'react-router-dom';
 function FeedbackForm() {
         // controlled form
         const [formData, setFormData]  = useState({
-             score:"",
+            id:"", 
+            score:"",
              what_did_you_enjoy:"",
              what_needs_improvement:"",
              would_you_watch_again:"",
@@ -39,6 +40,7 @@ function FeedbackForm() {
         .then((newFeedback) => {
           setFormData(newFeedback);
           setFormData({
+            id:"",
             score:"",
             what_did_you_enjoy:"",
             what_needs_improvement:"",

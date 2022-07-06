@@ -13,6 +13,7 @@ function FeedbackList() {
 
     const displayFeedback = feedbacks.map((feedbackShown) =>{
       return <h3 key={feedbackShown.id}>
+          {feedbackShown.id},
           {feedbackShown.score},
           {feedbackShown.what_did_you_enjoy},
           {feedbackShown.what_needs_improvement},
