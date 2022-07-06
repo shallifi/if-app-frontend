@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
-function AudienceMember(){
+
+function AudienceMember({onAddAudienceMember}){
 
     
     // controlled form
@@ -20,6 +22,8 @@ function AudienceMember(){
         )
     };
     
+    const history = useHistory();
+
     const handleSubmit = (e) => {
         e.preventDefault();
         
@@ -34,7 +38,7 @@ function AudienceMember(){
         fetch(`http://localhost:9292/audience_members`, configObj)
         .then((resp) => resp.json())
         .then((newAudienceMember) => {
-                formData(newAudienceMember);
+                onAddAudienceMember(newAudienceMember);
                 setFormData({
                     name:"",
                     age:"",
@@ -43,7 +47,7 @@ function AudienceMember(){
                     first_time :""
                 });
             });
-            // history.push(`/show_pieces`)
+            history.push(`/show_pieces`)
         }
         
         
@@ -97,8 +101,8 @@ function AudienceMember(){
             <h2>Seeing This Company For The First Time?</h2>
             <select className='drop-menu' >
                 <option selected value="first_time">Select true for Yes or false for No</option>
-                    <option value="first_time"> true</option>
-                    <option value="first_time"> false</option>
+                    <option value="true"> Yes</option>
+                    <option value="false"> No</option>
             </select> 
 
             <button type="submit"  style={submitButton}>Submit Your Information and Proceed to Feedback Section</button>
