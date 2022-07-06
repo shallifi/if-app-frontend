@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import ShowPieceList from "./components/ShowPieceList";
 import FeedbackList from "./components/FeedbackList";
+import FeedbackForm from "./components/FeedbackForm";
 
 
 
@@ -37,7 +38,11 @@ function App() {
       </Route>
       <Route path="/feedbacks">
         <FeedbackList />
-        <p>opinions of pieces</p>
+        <p>List of all the feedbacks of the pieces</p>
+      </Route>
+      <Route path="/feedbacks/forms">
+        <FeedbackForm />
+        <p>Feedbackform</p>
       </Route>
         
         <h2>

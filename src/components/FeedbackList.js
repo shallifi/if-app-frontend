@@ -11,7 +11,20 @@ function FeedbackList() {
     }, []);
 
 
-    
+    const displayFeedback = feedbacks.map((feedbackShown) =>{
+      return <h3 key={feedbackShown.id}>
+          {feedbackShown.score},
+          {feedbackShown.what_did_you_enjoy},
+          {feedbackShown.what_needs_improvement},
+          {feedbackShown.would_you_watch_again},
+          {feedbackShown.comment},
+          {feedbackShown.how_did_you_hear_about_the_show}
+
+      </h3>
+
+  }
+  )
+
 
     
     // const renderItems = filteredProjects.map((project) => (
@@ -46,7 +59,13 @@ function FeedbackList() {
   
   
     return (
-    <div>FeedbackList</div>
+    <div>FeedbackList
+        <ul>
+            {displayFeedback}
+        </ul>
+
+    </div>
+
   )
 }
 

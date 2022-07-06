@@ -88,7 +88,7 @@ function AudienceMember({onAddAudienceMember}){
                 name="household_income" 
                 placeholder="Yearly Income Estimate"
                 onChange={handleChange}
-                value={formData.manager}/> 
+                value={formData.household_income}/> 
             
             <h2>City of Residence</h2>
                 <input type="text" 
@@ -96,11 +96,11 @@ function AudienceMember({onAddAudienceMember}){
                 name="city" 
                 placeholder="What city do you call home?"
                 onChange={handleChange}
-                value={formData.title}/>
+                value={formData.city}/>
             
             <h2>Seeing This Company For The First Time?</h2>
             <select className='drop-menu' >
-                <option selected value="first_time">Select true for Yes or false for No</option>
+                <option selected value="first_time">Select Yes or  No</option>
                     <option value="true"> Yes</option>
                     <option value="false"> No</option>
             </select> 

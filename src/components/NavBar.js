@@ -26,6 +26,12 @@ return (
             >
                 <h3> Feedback list of the show</h3>
         </NavLink>
+        <NavLink exact to="/feedbacks/forms"
+            style={boxButtonStyle} 
+            activeStyle={{ background: "darkred", }}
+            >
+                <h3> Leave your Feedback</h3>
+        </NavLink>
 
     </div>
 
