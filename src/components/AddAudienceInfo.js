@@ -31,7 +31,7 @@ function AudienceMember({onAddAudienceMember}){
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json",
+                "Accept": "application/json",
             },
             body: JSON.stringify({ ...formData }),
         };
@@ -47,7 +47,7 @@ function AudienceMember({onAddAudienceMember}){
                     first_time :""
                 });
             });
-            history.push(`/show_pieces`)
+            history.push(`show_pieces`)
         }
         
         
@@ -70,15 +70,15 @@ function AudienceMember({onAddAudienceMember}){
             
             <h2 style={formStyle}>Age Range</h2>
                 <select className='drop-menu' >
-                    <option selected value="age">Select your decade</option>
-                    <option value="age">below 20 years of age</option>
-                    <option value="age">in your 20's</option>
-                    <option value="age">in your 30's</option>
-                    <option value="age">in your 40's</option>
-                    <option value="age">in your 50's</option>
-                    <option value="age">in your 60's</option>
-                    <option value="age">in your 70's</option>
-                    <option value="age">above 80 years old</option>
+                    <option value="">Select your decade</option>
+                    <option value="10">below 20 years of age</option>
+                    <option value="20">in your 20's</option>
+                    <option value="30">in your 30's</option>
+                    <option value="40">in your 40's</option>
+                    <option value="50">in your 50's</option>
+                    <option value="60">in your 60's</option>
+                    <option value="70">in your 70's</option>
+                    <option value="80">above 80 years old</option>
                 </select>
 
 

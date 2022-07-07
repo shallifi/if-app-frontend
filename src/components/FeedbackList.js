@@ -5,14 +5,32 @@ function FeedbackList() {
   const [feedbacks, setFeedbacks] = useState ([]);
 
     useEffect(() => {
-        fetch(`http://localhost:9292/feedbacks`)
+        fetch("http://localhost:9292/feedbacks")
         .then((res) => res.json())
         .then((data) => setFeedbacks(data));
     }, []);
 
+       function handleDelete(id){
+        console.log(id)
+        fetch(`http://localhost:9292/feedbacks/${id}`, {
+            method: "DELETE", 
+            // headers: {
+            // "Content-Type": "application/json",
+            // "Accept": "application/json",
+            // },
+           
+        })
+        .then((response) => response.json())
+        .then((deletedFeedback)=>{console.log(deletedFeedback)
+        setFeedbacks(deletedFeedback)})
+        .catch((error)=>alert(error))
+
+        // onDelete(id)
+    }
 
     const displayFeedback = feedbacks.map((feedbackShown) =>{
-      return <h3 key={feedbackShown.id}>
+      
+      return <li key={feedbackShown.id}>
           {feedbackShown.id},
           {feedbackShown.score},
           {feedbackShown.what_did_you_enjoy},
@@ -20,8 +38,9 @@ function FeedbackList() {
           {feedbackShown.would_you_watch_again},
           {feedbackShown.comment},
           {feedbackShown.how_did_you_hear_about_the_show}
+          <button onClick={()=>handleDelete(feedbackShown.id)}>Delete</button>
 
-      </h3>
+      </li>
 
   }
   )
@@ -51,12 +70,7 @@ function FeedbackList() {
     
 
 
-    // function handleDelete(){
-    //     fetch(`http://localhost:9292/feedbacks/${id}`, {
-    //         method: "DELETE"
-    //     })
-    //     onDelete(id)
-    // }
+ 
   
   
     return (

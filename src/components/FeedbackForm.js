@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 
 
-function FeedbackForm() {
+function FeedbackForm({onAddForm}) {
         // controlled form
         const [formData, setFormData]  = useState({
             id:"", 
@@ -38,7 +38,7 @@ function FeedbackForm() {
       fetch(`http://localhost:9292/feedbacks`, configObj)
         .then((resp) => resp.json())
         .then((newFeedback) => {
-          setFormData(newFeedback);
+          onAddForm(newFeedback);
           setFormData({
             id:"",
             score:"",
@@ -49,7 +49,7 @@ function FeedbackForm() {
             how_did_you_hear_about_the_show:""
         });
       });
-      history.push(`showpiecelist`)
+      history.push(`feedbacks`)
     }
 
 
@@ -60,7 +60,9 @@ function FeedbackForm() {
                 <div>FeedbackForm
                     <p>The information that you provide will help the company obtain grants for more performances in the future.</p>
 
-                    
+                    <h2 style={formStyle}>Name of the piece</h2>
+
+
                     <h2 style={formStyle}>Score 1-10</h2>
                         <select className='drop-menu' >
                             <option selected value="age">Overall Score for the piece</option>
@@ -113,7 +115,7 @@ function FeedbackForm() {
                             name="how_did_you_hear_about_the_show" 
                             placeholder="An answer here will help us determine what works for Marketing"
                             onChange={handleChange}
-                            value={formData.comment}/>
+                            value={formData.how_did_you_hear_about_the_show}/>
 
 
                     <button type="submit"  style={submitButton}>Submit Your Feedback and return back to Program Section</button>
