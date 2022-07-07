@@ -9,15 +9,11 @@ function FeedbackList() {
         .then((res) => res.json())
         .then((data) => setFeedbacks(data));
     }, []);
-
+// handleDelete function
        function handleDelete(id){
         console.log(id)
         fetch(`http://localhost:9292/feedbacks/${id}`, {
             method: "DELETE", 
-            // headers: {
-            // "Content-Type": "application/json",
-            // "Accept": "application/json",
-            // },
            
         })
         .then((response) => response.json())
@@ -25,7 +21,7 @@ function FeedbackList() {
         setFeedbacks(deletedFeedback)})
         .catch((error)=>alert(error))
 
-        // onDelete(id)
+     
     }
 
     const displayFeedback = feedbacks.map((feedbackShown) =>{
@@ -44,34 +40,6 @@ function FeedbackList() {
 
   }
   )
-
-
-    
-    // const renderItems = filteredProjects.map((project) => (
-    //     <ProjectListItem key={project.id} {...project} editMode={editMode} onDelete={onDelete}/>
-    //   ));
-
-
-
-    // function addFeedback(newFeedback) {
-    //     setOpinions((opinions) => [...opinions, newFeedback])
-    // }
-
-
-    // need to pass a callback function. have the id of the project that we are editing and we need to signal to our app component that its going to render an edit form
-
-    // const fetchData = async () => {
-    //     const resp = await fetch("http://localhost:9292/feedbacks/");
-    //     if (resp.ok) {
-    //         const data = await resp.json();
-    //         setFeedbacks(data);
-    //     }
-    // };
-    
-
-
- 
-  
   
     return (
     <div>FeedbackList

@@ -38,8 +38,53 @@ code {
 }
 
 
-/* cards */
-.cards {
+section {
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: solid 10px rgb(223, 208, 2);
+  border-radius: 12px;
+  min-width: 200px;
+}
+
+input {
+  padding: 5em;
+  border: solid 10px rgb(76, 5, 209);
+}
+
+textarea {
+  min-height: 8em;
+  min-width: 100%;
+  padding: 1em;
+  border: solid 20px rgb(1, 66, 12);
+  margin-bottom: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cards not currently used */
+/* .cards {
   margin: 0 auto;
   list-style: none;
   width: 100%;
@@ -102,4 +147,4 @@ code {
 
 .card .extra {
   margin-top: auto;
-}
+}  */

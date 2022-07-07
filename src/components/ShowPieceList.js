@@ -13,10 +13,15 @@ function ShowPieceList() {
 
     const displayPieces = piece.map((piecesShown) =>{
         return <h3 key={piecesShown.id}>
+            Title
             {piecesShown.title},
+            # of Performers
             {piecesShown.number_of_performers},
+            Length of piece in minutes
             {piecesShown.length},
+            Music Album
             {piecesShown.music_album},
+            Movement Style
             {piecesShown.movement_style}
 
         </h3>

@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
         <Link to="/" style={{border:"orange"}}>
-          <h1>Instant Feedback App</h1>
+          <header>Instant Feedback App</header>
         </Link>
       <h1> Welcome to Tonight's Performance</h1>
      <NavBar />
@@ -32,14 +32,17 @@ function App() {
       <Route path="/audienceinfo">
         <AddAudienceInfo />
       </Route>
+
       <Route path="/show_pieces">
         <ShowPieceList />
         <p>About the Show</p>
       </Route>
+
       <Route path="/feedbacks">
         <FeedbackList />
         <p>List of all the feedbacks of the pieces</p>
       </Route>
+
       <Route path="/feedbacks/forms">
         <FeedbackForm />
         <p>Feedbackform</p>
@@ -47,6 +50,7 @@ function App() {
         
         <h2>
           About the company
+          <p>information about how the company was started, it's purpose, and it's goals.</p>
         </h2>
       
     </div>

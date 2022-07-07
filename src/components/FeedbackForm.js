@@ -80,7 +80,7 @@ function FeedbackForm({onAddForm}) {
 
                         <h2>What did you enjoy?</h2>
                             <input type="text" 
-                            style={formStyle} 
+                            // style={formStyle} 
                             name="what_did_you_enjoy" 
                             placeholder="Most memorable things about the piece"
                             onChange={handleChange}
@@ -88,7 +88,7 @@ function FeedbackForm({onAddForm}) {
                         
                         <h2>What needs improvement?</h2>
                             <input type="text" 
-                            style={formStyle} 
+                            // style={formStyle} 
                             name="what_needs_improvement" 
                             placeholder="Something you felt needed more..."
                             onChange={handleChange}
@@ -103,7 +103,7 @@ function FeedbackForm({onAddForm}) {
                         
                         <h2>Thoughtful Comment</h2>
                             <input type="text" 
-                            style={formStyle} 
+                            // style={formStyle} 
                             name="comment" 
                             placeholder="Additional feedback for choreographer"
                             onChange={handleChange}
@@ -111,7 +111,7 @@ function FeedbackForm({onAddForm}) {
                         
                         <h2>How did you hear about us?</h2>
                             <input type="text" 
-                            style={formStyle} 
+                            // style={formStyle} 
                             name="how_did_you_hear_about_the_show" 
                             placeholder="An answer here will help us determine what works for Marketing"
                             onChange={handleChange}
@@ -151,5 +151,6 @@ const submitButton = {
     display: "flex",
     flexdirection: "column",
     alignitems: "center",
-    
   }
+
+  
