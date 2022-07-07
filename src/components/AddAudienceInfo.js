@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 
-function AudienceMember({onAddAudienceMember}){
+function AudienceMember(){
 
     
     // controlled form
@@ -38,7 +38,7 @@ function AudienceMember({onAddAudienceMember}){
         fetch(`http://localhost:9292/audience_members`, configObj)
         .then((resp) => resp.json())
         .then((newAudienceMember) => {
-                onAddAudienceMember(newAudienceMember);
+                setFormData(newAudienceMember);
                 setFormData({
                     name:"",
                     age:"",
@@ -70,7 +70,7 @@ function AudienceMember({onAddAudienceMember}){
             
             <h2 style={formStyle}>Age Range</h2>
                 <select className='drop-menu' >
-                    <option value="">Select your decade</option>
+                    <option >Select your decade</option>
                     <option value="10">below 20 years of age</option>
                     <option value="20">in your 20's</option>
                     <option value="30">in your 30's</option>

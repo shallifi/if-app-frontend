@@ -65,7 +65,7 @@ function FeedbackForm({onAddForm}) {
 
                     <h2 style={formStyle}>Score 1-10</h2>
                         <select className='drop-menu' >
-                            <option selected value="age">Overall Score for the piece</option>
+                            <option>Overall Score for the piece</option>
                             <option value="age">1</option>
                             <option value="age">2</option>
                             <option value="age">3</option>
