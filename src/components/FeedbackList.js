@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 
+
 function FeedbackList() {
   const [feedbacks, setFeedbacks] = useState ([]);
+
 
     useEffect(() => {
         fetch("http://localhost:9292/feedbacks")
@@ -19,9 +21,7 @@ function FeedbackList() {
         .then((response) => response.json())
         .then((deletedFeedback)=>{console.log(deletedFeedback)
         setFeedbacks(deletedFeedback)})
-        .catch((error)=>alert(error))
-
-     
+        .catch((error)=>alert(error))     
     }
     const displayFeedback = feedbacks.map((feedbackShown) =>(
     <li key={feedbackShown.id}>
@@ -33,29 +33,14 @@ function FeedbackList() {
           {feedbackShown.comment},
           {feedbackShown.how_did_you_hear_about_the_show}
             <button onClick={()=>handleDelete(feedbackShown.id)}>Delete</button>
-            </li>))
-
-  
-//     const displayFeedback = feedbacks.map((feedbackShown) =>{
-      
-//       return <li key={feedbackShown.id}>
-//           {feedbackShown.id},
-//           {feedbackShown.score},
-//           {feedbackShown.what_did_you_enjoy},
-//           {feedbackShown.what_needs_improvement},
-//           {feedbackShown.would_you_watch_again},
-//           {feedbackShown.comment},
-//           {feedbackShown.how_did_you_hear_about_the_show}
-//             <button onClick={()=>handleDelete(feedbackShown.id)}>Delete</button>
-
-//       </li>
-
-//   })
+            </li>)
+            )
+          
 
     
   return (
       <div>FeedbackList
-        <ul className='cards'>
+        <ul className='squarewords'>
             {displayFeedback}
         </ul>
         

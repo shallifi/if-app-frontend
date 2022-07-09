@@ -28,7 +28,7 @@ function ShowPieceList() {
 
     }
     )
-
+    console.log(displayPieces)
     return (
     <div>
         <ul className='card'>

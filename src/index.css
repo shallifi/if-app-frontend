@@ -64,7 +64,7 @@ textarea {
 
 
 /* using this for FeedbackList*/
-.cards {
+.squarewords {
   margin: 0 auto;
   list-style: none;
   width: 100%;
@@ -79,7 +79,7 @@ textarea {
   max-width: 400px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  border: 2px solid var(--dark-turquoise);
+  border: 10px solid;
 }
 
 @media screen and (max-width: 588px) {
