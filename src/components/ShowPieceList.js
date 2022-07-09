@@ -30,8 +30,8 @@ function ShowPieceList() {
     )
 
     return (
-    <div>ShowPieceList
-        <ul>
+    <div>
+        <ul className='card'>
             {displayPieces}
         </ul>
     </div>

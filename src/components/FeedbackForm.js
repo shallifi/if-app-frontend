@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 
 
-function FeedbackForm({onAddForm}) {
+function FeedbackForm() {
         // controlled form
         const [formData, setFormData]  = useState({
             id:"", 
@@ -38,7 +38,7 @@ function FeedbackForm({onAddForm}) {
       fetch(`http://localhost:9292/feedbacks`, configObj)
         .then((resp) => resp.json())
         .then((newFeedback) => {
-          onAddForm(newFeedback);
+          setFormData(newFeedback);
           setFormData({
             id:"",
             score:"",
@@ -46,10 +46,14 @@ function FeedbackForm({onAddForm}) {
             what_needs_improvement:"",
             would_you_watch_again:"",
             comment:"",
-            how_did_you_hear_about_the_show:""
+            how_did_you_hear_about_the_show:"",
+            show_piece_id:"",
+            audience_member_id: ""
         });
       });
-      history.push(`feedbacks`)
+      history.push(`/feedbacks`);
+      history.go();
+      
     }
 
 
@@ -96,7 +100,7 @@ function FeedbackForm({onAddForm}) {
 
                         <h2>Would you watch again?</h2>
                             <select className='drop-menu' >
-                                <option selected value="would_you_watch_again">Select Yes or No</option>
+                                <option value="would_you_watch_again">Select Yes or No</option>
                                     <option value="true"> Yes</option>
                                     <option value="false"> No</option>
                             </select>      

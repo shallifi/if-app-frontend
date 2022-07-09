@@ -23,10 +23,8 @@ function FeedbackList() {
 
      
     }
-
-    const displayFeedback = feedbacks.map((feedbackShown) =>{
-      
-      return <li key={feedbackShown.id}>
+    const displayFeedback = feedbacks.map((feedbackShown) =>(
+    <li key={feedbackShown.id}>
           {feedbackShown.id},
           {feedbackShown.score},
           {feedbackShown.what_did_you_enjoy},
@@ -34,18 +32,33 @@ function FeedbackList() {
           {feedbackShown.would_you_watch_again},
           {feedbackShown.comment},
           {feedbackShown.how_did_you_hear_about_the_show}
-          <button onClick={()=>handleDelete(feedbackShown.id)}>Delete</button>
+            <button onClick={()=>handleDelete(feedbackShown.id)}>Delete</button>
+            </li>))
 
-      </li>
-
-  }
-  )
   
-    return (
-    <div>FeedbackList
-        <ul>
+//     const displayFeedback = feedbacks.map((feedbackShown) =>{
+      
+//       return <li key={feedbackShown.id}>
+//           {feedbackShown.id},
+//           {feedbackShown.score},
+//           {feedbackShown.what_did_you_enjoy},
+//           {feedbackShown.what_needs_improvement},
+//           {feedbackShown.would_you_watch_again},
+//           {feedbackShown.comment},
+//           {feedbackShown.how_did_you_hear_about_the_show}
+//             <button onClick={()=>handleDelete(feedbackShown.id)}>Delete</button>
+
+//       </li>
+
+//   })
+
+    
+  return (
+      <div>FeedbackList
+        <ul className='cards'>
             {displayFeedback}
         </ul>
+        
 
     </div>
 

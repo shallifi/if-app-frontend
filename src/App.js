@@ -13,13 +13,7 @@ import FeedbackForm from "./components/FeedbackForm";
 
 
 function App() {
-  // const [colorT, setColorT] = useState('black')
 
-
-  // function handleColorChange(newColor) {
-  //   setColorT(newColor)
-  //   console.log("click")
-  // }
 
   return (
     <div>
@@ -27,6 +21,10 @@ function App() {
           <header>Instant Feedback App</header>
         </Link>
       <h1> Welcome to Tonight's Performance</h1>
+        <h2>
+          About the company
+          <p>information about how the company was started, it's purpose, and it's goals.</p>
+        </h2>
      <NavBar />
       
       <Route path="/audienceinfo">
@@ -34,24 +32,20 @@ function App() {
       </Route>
 
       <Route path="/show_pieces">
-        <ShowPieceList />
         <p>About the Show</p>
+        <ShowPieceList />
       </Route>
 
-      <Route path="/feedbacks">
-        <FeedbackList />
+      <Route path="/feedbacks"forceRefresh={true}>
         <p>List of all the feedbacks of the pieces</p>
+        <FeedbackList />
       </Route>
 
       <Route path="/feedbacks/forms">
-        <FeedbackForm />
         <p>Feedbackform</p>
+        <FeedbackForm />
       </Route>
         
-        <h2>
-          About the company
-          <p>information about how the company was started, it's purpose, and it's goals.</p>
-        </h2>
       
     </div>
   );

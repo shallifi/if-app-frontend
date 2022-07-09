@@ -63,28 +63,8 @@ textarea {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* cards not currently used */
-/* .cards {
+/* using this for FeedbackList*/
+.cards {
   margin: 0 auto;
   list-style: none;
   width: 100%;
@@ -93,6 +73,8 @@ textarea {
   gap: 1.5rem;
 }
 
+
+/* using this for ShowPieceList in other words Program for Tonight */
 .card {
   max-width: 400px;
   display: grid;
@@ -119,20 +101,9 @@ textarea {
   object-fit: cover;
 }
 
-.card .image .claps {
-  color: transparent;
-  text-shadow: 0 0 0 var(--turquoise);
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
 
-.card .image .claps:focus,
-.card .image .claps:hover {
-  color: transparent;
-  text-shadow: 0 0 0 var(--color);
-}
 
+/* 
 .card .details {
   margin: 0.5rem;
 }
@@ -147,4 +118,4 @@ textarea {
 
 .card .extra {
   margin-top: auto;
-}  */
+}  */ 

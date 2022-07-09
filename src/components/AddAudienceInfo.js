@@ -82,6 +82,8 @@ function AudienceMember(){
                 </select>
 
 
+
+
             <h2>Household Income</h2>
                 <input type="number" 
                 style={formStyle} 
@@ -100,7 +102,7 @@ function AudienceMember(){
             
             <h2>Seeing This Company For The First Time?</h2>
             <select className='drop-menu' >
-                <option selected value="first_time">Select Yes or  No</option>
+                <option value="first_time">Select Yes or  No</option>
                     <option value="true"> Yes</option>
                     <option value="false"> No</option>
             </select> 
